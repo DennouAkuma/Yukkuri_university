@@ -1,0 +1,222 @@
+﻿
+
+h1 {
+    text-align: center
+}
+
+img {
+
+}
+
+header {
+    position: relative;
+    bottom:90px;
+}
+
+@charset "utf-8";
+
+/*==================================================
+�X���C�_�[�̂��߂�css
+===================================*/
+.slider { /*����94%�ō��E�ɗ]����������Ē�����*/
+    width: 94%;
+    margin: 0 auto;
+}
+
+    .slider img {
+        width: 100%; /*�X���C�_�[��̉摜�����100%��*/
+        height: auto;
+    }
+
+    /*slick��JS�ŏ������^�O��A�X���C�h���E�̗]������*/
+
+    .slider .slick-slide {
+        margin: 0 10px;
+    }
+
+/*���̐ݒ�*/
+
+/*�߂�A���֖��̈ʒu*/
+.slick-prev,
+.slick-next {
+    position: absolute; /*��Δz�u�ɂ���*/
+    top: 42%;
+    cursor: pointer; /*�}�E�X�J�[�\����w�}�[�N��*/
+    outline: none; /*�N���b�N�������o�Ă���g�������*/
+    border-top: 2px solid #666; /*���̐F*/
+    border-right: 2px solid #666; /*���̐F*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev { /*�߂���̈ʒu�ƌ`��*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next { /*���֖��̈ʒu�ƌ`��*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*�h�b�g�i�r�Q�[�V�����̐ݒ�*/
+
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+    .slick-dots li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .slick-dots button {
+        color: transparent;
+        outline: none;
+        width: 8px; /*�h�b�g�{�^���̃T�C�Y*/
+        height: 8px; /*�h�b�g�{�^���̃T�C�Y*/
+        display: block;
+        border-radius: 50%;
+        background: #ccc; /*�h�b�g�{�^���̐F*/
+    }
+
+    .slick-dots .slick-active button {
+        background: #333; /*�h�b�g�{�^���̌��ݒn�\���̐F*/
+    }
+
+
+/*========= ���C�A�E�g�̂��߂�CSS ===============*/
+
+body {
+    background: #eee;
+}
+
+h2, p {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #333;
+}
+
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    li a:hover:not(.active) {
+        background-color: #a9bce2;
+    }
+
+.active {
+    background-color: #da3c41;
+}
+
+.cp_cssslider {
+    width: 1980px;
+    height: 720px;
+    overflow: hidden;
+    margin: 2em auto;
+    border: 10px solid #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+.cp_slide_item {
+    width: 1980px;
+    height: 720px;
+    float: left;
+    position: relative;
+}
+
+.cp_slidewrapper {
+    width: 500%; /* slideの枚数×100% */
+    position: relative;
+    left: 0;
+    animation: slider 20s infinite ease; /* スピード */
+}
+
+@-webkit-keyframes slider {
+    /* 100%を枚数で割った%に割り振る */
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    20% {
+        -webkit-transform: translateX(-1980px);
+        transform: translateX(-1980px);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3960px);
+        transform: translateX(-3960px);
+    }
+
+    60% {
+        -webkit-transform: translateX(-5940px);
+        transform: translateX(-5940px);
+    }
+
+    80% {
+        -webkit-transform: translateX(-7920px);
+        transform: translateX(-7920px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slider {
+    /* 100%を枚数で割った%に割り振る */
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    20% {
+        -webkit-transform: translateX(-1980px);
+        transform: translateX(-1980px);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3960px);
+        transform: translateX(-3960px);
+    }
+
+    60% {
+        -webkit-transform: translateX(-5940px);
+        transform: translateX(-5940px);
+    }
+
+    80% {
+        -webkit-transform: translateX(-7920px);
+        transform: translateX(-7920px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
