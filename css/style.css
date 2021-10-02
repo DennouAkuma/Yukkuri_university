@@ -1,92 +1,17 @@
-﻿
+﻿@charset "utf-8";
 
 h1 {
     text-align: center
 }
 
 img {
-
+    vertical-align:bottom;
 }
 
 header {
-    position: relative;
-    bottom:90px;
+    padding: 0;
+    margin: 0;
 }
-
-@charset "utf-8";
-
-/*==================================================
-�X���C�_�[�̂��߂�css
-===================================*/
-.slider { /*����94%�ō��E�ɗ]����������Ē�����*/
-    width: 94%;
-    margin: 0 auto;
-}
-
-    .slider img {
-        width: 100%; /*�X���C�_�[��̉摜�����100%��*/
-        height: auto;
-    }
-
-    /*slick��JS�ŏ������^�O��A�X���C�h���E�̗]������*/
-
-    .slider .slick-slide {
-        margin: 0 10px;
-    }
-
-/*���̐ݒ�*/
-
-/*�߂�A���֖��̈ʒu*/
-.slick-prev,
-.slick-next {
-    position: absolute; /*��Δz�u�ɂ���*/
-    top: 42%;
-    cursor: pointer; /*�}�E�X�J�[�\����w�}�[�N��*/
-    outline: none; /*�N���b�N�������o�Ă���g�������*/
-    border-top: 2px solid #666; /*���̐F*/
-    border-right: 2px solid #666; /*���̐F*/
-    height: 15px;
-    width: 15px;
-}
-
-.slick-prev { /*�߂���̈ʒu�ƌ`��*/
-    left: -1.5%;
-    transform: rotate(-135deg);
-}
-
-.slick-next { /*���֖��̈ʒu�ƌ`��*/
-    right: -1.5%;
-    transform: rotate(45deg);
-}
-
-/*�h�b�g�i�r�Q�[�V�����̐ݒ�*/
-
-.slick-dots {
-    text-align: center;
-    margin: 20px 0 0 0;
-}
-
-    .slick-dots li {
-        display: inline-block;
-        margin: 0 5px;
-    }
-
-    .slick-dots button {
-        color: transparent;
-        outline: none;
-        width: 8px; /*�h�b�g�{�^���̃T�C�Y*/
-        height: 8px; /*�h�b�g�{�^���̃T�C�Y*/
-        display: block;
-        border-radius: 50%;
-        background: #ccc; /*�h�b�g�{�^���̐F*/
-    }
-
-    .slick-dots .slick-active button {
-        background: #333; /*�h�b�g�{�^���̌��ݒn�\���̐F*/
-    }
-
-
-/*========= ���C�A�E�g�̂��߂�CSS ===============*/
 
 body {
     background: #eee;
@@ -107,10 +32,10 @@ a {
     color: #333;
 }
 
-    a:hover,
-    a:active {
-        text-decoration: none;
-    }
+a:hover,
+a:active {
+    text-decoration: none;
+}
 
 li:last-child {
     border-right: none;
@@ -124,12 +49,66 @@ li a {
     text-decoration: none;
 }
 
-    li a:hover:not(.active) {
-        background-color: #a9bce2;
-    }
+li a:hover:not(.active) {
+    background-color: #a9bce2;
+}
 
 .active {
     background-color: #da3c41;
+}
+/*--ロゴ--*/
+#title_logo{
+    text-align: center; /*webサイトの中央？*/
+    margin: 0;
+    padding: 0;
+    width: 400px;
+}
+
+/*メニュー関連*/
+#menu_ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1b2538;
+}
+
+#menu_ul li{
+    float: left;
+    border-right: 1px solid #bbbbbb;
+}
+
+
+/*float解除(見えない水平線)*/
+.float_clearA{
+    clear: both;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*コンテンツ*/
+.content{
+    margin-top: 85px;
+}
+
+.content h1{
+    color: #364e96; /*文字色*/
+    padding: 0.5em 0; /*上下の余白*/
+    border-top: solid 3px #364e96; /*上線*/
+    border-bottom: solid 3px #364e96; /*下線*/
+}
+
+.content p{
+    text-align: left 
+}
+
+/*スライド部分*/
+:root{
+    --slider-width: 95%;
+    /*左方向: -1*/
+    /*右方向: 1*/
+    --slider-direction: -1 
 }
 
 .cp_cssslider {
