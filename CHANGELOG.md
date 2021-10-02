@@ -23,3 +23,4 @@
 - float_clearA(class)を追加 → フロート解除
 - content部分にhtml直書き部分を移行
 - その他、margin指定の部分を複数削除
+
