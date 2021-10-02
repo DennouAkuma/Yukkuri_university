@@ -2,14 +2,14 @@
 
 ## [Unreleased]
 
-##2021-10-02 変更点
-###全体構成
+## 2021-10-02 変更点
+### 全体構成
 ・ディレクトリーを変更
 ./css → cssファイル
 ./js → JavaScriptファイル
 ./media → 画像や動画などのメディアデータ
 
-###htmlファイル
+### htmlファイル
 ・HTML5宣言を追加
 ・SEO対策、metaを追加
 ・アイコンを設定
@@ -17,7 +17,7 @@
 ・html直書きのstyleを削除　→　style.cssファイルに移動
 ・隙間構成を変更
 
-###cssファイル
+### cssファイル
 ・title_logo(id)を追加 → ロゴ部分
 ・menu_ul(id)を追加 → メニュー部分
 ・float_clearA(class)を追加 → フロート解除
