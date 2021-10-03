@@ -1,20 +1,35 @@
 ﻿@charset "utf-8";
 
-h1 {
-    text-align: center
-}
-
-img {
-    vertical-align:bottom;
+/*===========タグの記述↓==========*/
+/*body,header,main,footer*/
+body {
+    width: 100%;
+    background: #eee;
+    margin: 0;
 }
 
 header {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
-body {
-    background: #eee;
+main{
+    padding-bottom: 100px; 
+}
+
+footer{
+    background: #f5fffa;
+    margin: 0;
+    padding: 0;
+    height: 175px;
+    text-align: center;
+}
+
+/*文字関係*/
+
+h1 {
+    text-align: center
 }
 
 h2, p {
@@ -37,6 +52,12 @@ a:active {
     text-decoration: none;
 }
 
+/*その他*/
+
+img {
+    vertical-align:bottom;
+}
+
 li:last-child {
     border-right: none;
 }
@@ -57,7 +78,9 @@ li a:hover:not(.active) {
     background-color: #da3c41;
 }
 
+/*===========id/classの記述↓==========*/
 /*--ロゴ--*/
+
 #title_logo{
     text-align: center; /*webサイトの中央？*/
     margin: 0;
@@ -83,7 +106,7 @@ li a:hover:not(.active) {
 /*float解除(見えない水平線)*/
 .float_clearA{
     clear: both;
-    border: jqunone;
+    border: 0;
     margin: 0;
     padding: 0;
 }
@@ -123,3 +146,47 @@ li a:hover:not(.active) {
     border: 1px solid #f00;
     float: left;  
 }
+
+/*--プロフィール--*/
+.content{
+    width: 95%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profile{
+    width: 19.5%;
+    float: left;
+    margin-right: 0.5%;
+}
+.profile img{
+    width: 100%;
+    height: auto;
+}
+
+.sentence{
+    width: 80%;
+    float: left;
+}
+
+/*
+サインの位置はどうすればよろしいでしょうか？
+一応、公式文章ぽく右側に持ってきていますが…
+*/
+.sentence img{
+    width: 10%;
+    float: right;
+}
+
+/*
+「学校長の言葉」を中央ぞろえに
+持っていく場合は「.sentence p」の
+コメントから外してください
+*/
+
+/*
+.sentence p{
+    text-align: center;
+}
+*/
