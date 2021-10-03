@@ -6,21 +6,29 @@ $(function(){
     var sleep_time = 5;//スライドの表示時間(秒)
 
 /*===================これ以上、下は変更しない事==================*/
-
+    
+    var test = $("header").width()
+    console.log("処理を行う前header : " + test + "px")
     var id_array = setting_slide(slide_tag_str,
                                 slide_all_str,
                                 slide_time,
                                 sleep_time);
+
+    var test = $("header").width()
+    console.log("処理後header : " + test + "px")
+    
 });
 
 function setting_slide(slide_tag,slide_all,sli_time,slp_time){
     var img_object = $(slide_tag).find('img');
     var img_width = $(slide_tag).width();
 
+    console.log("スライドimg_width : " + img_width + "px")
+
     if(img_width > 1080){
         img_width = img_width - 17
     }
-    
+
     var img_class_str = "slide_img_class";
     var max_width = (img_width * img_object.length) + (img_object.length * 2);
 
