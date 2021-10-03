@@ -105,20 +105,21 @@ li a:hover:not(.active) {
 }
 
 /*スライド部分*/
-#cp_slidewrapper{
-    position:relative;
+#slide_content{
+    position: relative;  
     overflow: hidden;
-    height: auto;
-    border: 5px solid #f00;
+    border: 1px solid rgb(12, 165, 226);
+    padding: 0;
+    margin: 0;
 }
 
-#cp_slidewrapper img{
+#slide_all{
     position: absolute;
-    top: 0;
-
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    z-index: -1;
+    border: 1px solid rgb(141, 17, 224);
+    float: left;
 }
 
+#slide_all img{
+    border: 1px solid #f00;
+    float: left;  
+}
