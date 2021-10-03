@@ -83,7 +83,7 @@ li a:hover:not(.active) {
 /*float解除(見えない水平線)*/
 .float_clearA{
     clear: both;
-    border: none;
+    border: jqunone;
     margin: 0;
     padding: 0;
 }
@@ -105,98 +105,20 @@ li a:hover:not(.active) {
 }
 
 /*スライド部分*/
-:root{
-    --slider-width: 95%;
-    /*左方向: -1*/
-    /*右方向: 1*/
-    --slider-direction: -1 
-}
-
-.cp_cssslider {
-    width: 1980px;
-    height: 720px;
+#cp_slidewrapper{
+    position:relative;
     overflow: hidden;
-    margin: 0 auto;
-    border: 10px solid #ffffff;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    height: auto;
+    border: 5px solid #f00;
 }
 
-.cp_slide_item {
-    width: 1980px;
-    height: 720px;
-    float: left;
-    position: relative;
+#cp_slidewrapper img{
+    position: absolute;
+    top: 0;
+
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 
-.cp_slidewrapper {
-    width: 500%; /* slideの枚数×100% */
-    position: relative;
-    left: 0;
-    animation: slider 20s infinite ease; /* スピード */
-}
-
-@-webkit-keyframes slider {
-    /* 100%を枚数で割った%に割り振る */
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    20% {
-        -webkit-transform: translateX(-1980px);
-        transform: translateX(-1980px);
-    }
-
-    40% {
-        -webkit-transform: translateX(-3960px);
-        transform: translateX(-3960px);
-    }
-
-    60% {
-        -webkit-transform: translateX(-5940px);
-        transform: translateX(-5940px);
-    }
-
-    80% {
-        -webkit-transform: translateX(-7920px);
-        transform: translateX(-7920px);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
-@keyframes slider {
-    /* 100%を枚数で割った%に割り振る */
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    20% {
-        -webkit-transform: translateX(-1980px);
-        transform: translateX(-1980px);
-    }
-
-    40% {
-        -webkit-transform: translateX(-3960px);
-        transform: translateX(-3960px);
-    }
-
-    60% {
-        -webkit-transform: translateX(-5940px);
-        transform: translateX(-5940px);
-    }
-
-    80% {
-        -webkit-transform: translateX(-7920px);
-        transform: translateX(-7920px);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
