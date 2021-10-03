@@ -1,20 +1,26 @@
 $(function(){
     var slide_tag_str = "#slide_content";
     var slide_all_str = "#slide_all";
+
     var slide_time = 2;//スライドの移動時間(秒)
     var sleep_time = 5;//スライドの表示時間(秒)
+
+/*===================これ以上、下は変更しない事==================*/
 
     var id_array = setting_slide(slide_tag_str,
                                 slide_all_str,
                                 slide_time,
                                 sleep_time);
-
 });
 
 function setting_slide(slide_tag,slide_all,sli_time,slp_time){
     var img_object = $(slide_tag).find('img');
     var img_width = $(slide_tag).width();
 
+    if(img_width > 1080){
+        img_width = img_width - 17
+    }
+    
     var img_class_str = "slide_img_class";
     var max_width = (img_width * img_object.length) + (img_object.length * 2);
 
@@ -27,8 +33,6 @@ function setting_slide(slide_tag,slide_all,sli_time,slp_time){
         $(this).attr('class', img_class_str).trigger('create');
     });
 
-    //画像の幅調整
-    console.log(img_width)
     var chas_class_str = "." + img_class_str;
     $(chas_class_str).css('width',img_width);
     var img_height = img_object.height();
@@ -50,5 +54,7 @@ function setting_slide(slide_tag,slide_all,sli_time,slp_time){
         }
         chas_count = chas_count + 1;
     },sleep_time);
+
+    console.log($("header").width())
 }
 
