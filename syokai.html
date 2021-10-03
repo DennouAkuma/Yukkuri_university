@@ -9,7 +9,8 @@
     <!--<link rel="canonical" href="URL重複防止(スマホ/PC)" />-->
 
     <title>ゆっくり大学とは</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main_style.css">
+    <link rel="stylesheet" href="./css/gui_style.css">
 
     <!--アイコン設定-->
     <link rel="icon" type="image/png" href="./media/img/icon.png" />
@@ -36,15 +37,54 @@
 
     </header>
 
-    <main id="huse">
-        <h1 id="setumeimidasi1">ゆっくり大学とは</h1>
-        <img id="reimu" src="./media/img/霊夢png" style="left:400px;" />
-        <div id="reimuserif" class="balloon2-left" style="top:50px;"><p>どうも、ゆっくり霊夢です</p></div>
-        <div class="balloon2-right" id="marisaserif" style="top:100px;">
-            <p>どうも、ゆっくり魔理沙だぜ</p>
+    <main>
+        <div class="yukkuri_conversation">
+            <h1 class="title_h1_A">ゆっくり大学とは</h1>
+            <div>
+                <!-- ゆっくりテンプレート(文章と画像パス変更のみで使える)
+
+                霊夢
+                <div class="reimu_content">
+                    <img id="reimu" src="./media/img/reimu.png"/>
+                    <div class="balloon2-left">
+                        <p>どうも、ゆっくり霊夢です</p>
+                    </div>
+                </div>
+
+                魔理沙
+                <div class="marisa_content">
+                    <div class="balloon2-right">
+                        <p>どうも、ゆっくり魔理沙だぜ</p>
+                    </div>
+                    <img id="reimu" src="./media/img/marisa.png" />
+                </div>
+                
+                誤動作防止のためid部分はすべて削除
+                classに変更済み
+                -->
+
+                <hr class="float_clearA">
+                <div class="reimu_content">
+                    <img id="reimu" src="./media/img/reimu.png"/>
+                    <div class="balloon2-left">
+                        <p>どうも、ゆっくり霊夢です</p>
+                    </div>
+                </div>
+
+                <div class="marisa_content">
+                    <div class="balloon2-right">
+                        <p>どうも、ゆっくり魔理沙だぜ</p>
+                    </div>
+                    <img id="reimu" src="./media/img/marisa.png" />
+                </div>
+            </div>
         </div>
     </main>
+
     <footer>
+        <div class="footer_content">
+            <p id="footer1">© 2021 ゆっくり大学　<a href="porise.html">プライバシーポリシー</a></p>
+        </div>
     </footer>
 
 </body>

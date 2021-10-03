@@ -9,7 +9,8 @@
     <!--<link rel="canonical" href="URL重複防止(スマホ/PC)" />-->
 
     <title>ゆっくり大学</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main_style.css">
+    <link rel="stylesheet" href="./css/gui_style.css">
 
     <!--アイコン設定-->
     <link rel="icon" type="image/png" href="./media/img/icon.png" />
@@ -18,13 +19,13 @@
 </head>
 
 <body>
-    <header id="header">
+    <header>
         <img id="title_logo" src="./media/img/logo.png">
         <!--
-    <h1 class="headline">
-        <a></a>
-    </h1>
-    -->
+        <h1 class="headline">
+            <a></a>
+        </h1>
+        -->
         <!--メニュー-->
         <ul id="menu_ul">
             <li><a class="active" href="./index.html">ホーム</a></li>
@@ -34,56 +35,61 @@
 
         <hr class="float_clearA">
     </header>
-    <!--スライドー-->
-    <main id="suraido">
+
+    <main>
+        <!--スライドー-->
         <div id="slide_content">
             <div id="slide_all">
-                <img src="./media/img/junbi.png">
-                <a href="https://www.youtube.com/channel/UCA1seqQMJaleBrIGN2RPIEg/featured"><img src="./media/img/チャンネル開設.png" ></a>
-                <img src="./media/img/junbi.png">
-                <img src="./media/img/junbi.png">
-                <img src="./media/img/junbi.png">
-                <img src="./media/img/junbi.png">
+                <img src="./media/img/slide_0.png">
+                <img src="./media/img/slide_1.png">
+                <img src="./media/img/slide_0.png">
+                <img src="./media/img/slide_0.png">
+                <img src="./media/img/slide_0.png">
+                <img src="./media/img/slide_0.png">
             </div>
         </div>
-    </main>
 
-        <!--学校長の言葉-->
-    <main id="main">
-        <h1 id="wordkocho">学校長の言葉</h1>
-
-        <p>
-            今般のコロナ禍により、多くの人々が生存の危機と生活の困難に直面しています。皆さまに心からお見舞い申し上げ、各関係分野でご努力を続けておられる方々に敬意を表し感謝申し上げます。<br>
-            ゆっくり大学は、ゆっくり解説動画を通じてオンライン授業の拡充することにより、ステイホームやコロナ自粛における皆さまの新しい生活をより有意義なものとできるよう努めてまいります。<br>
-
-            当学は、「自ら調べ自ら考える力ある人物の育成」及び「ゆっくり解説の門戸を広げる」との建学の精神のもと、動画投稿者を支援するとともに、よりよい動画を視聴者に提供することで、社会を支え、未来を拓く人材を送り出します。<br>
-            <br>
-            学問や研究は、実社会とそこに生きる人々と無縁ではなく、現実事象から課題を発見し、解説動画として視聴者にを還元すべきです。また、解説動画は社会の営みや視聴者の反応との相互作用により発展すべきです。よって当学は常に時代とともにあり、社会の変化に適合するよう進化してまいります。<br>
-            <br>
-            かかる社会の変化に適合する解説動画を支援することは、「自ら調べ自ら考える力ある人物の育成」という当学の建学の精神に根ざしています。したがって、当学教員の投稿する解説動画は、視聴者の自ら考える力の素地としての知識を伝達することはもとより、コメントやツイッターでの交流の中で培われるコミュニケーション力や議論する力、そして弛まず学び続ける力の涵養にする一助となるものと確信しております。<br>
-            <br>
-            今日の日本社会においては、DX（デジタルトランスフォーメーション）の進展に加え、働き方改革の進展やアフターコロナの新生活様式に思いを致すとき、従来にない大きな変化が起こることが予見できます。そこで当学は視聴者がこの歴史的変化に備え、かつよりよい生活を営めるよう学習環境の充実に向けて前進します。<br>
-            <br>
-            我々は解説動画自体は勿論のことコメント欄やツイッターといった豊富なリソースを活用し、視聴者と共に学び、成長することを望んでいます。このように「開かれたゆっくり大学」を目指してまいりますので、視聴者さんも遠慮なくリソースを活用してくださいね。
-        </p>
-        <img src="sain.jpg" />
-    </main>
-    <div id="side">
-        <div class="box" id="kochopurofiru">
-            <h1 id="kochopurofiru1">学校長プロフィール</h1>
-            <img src="./media/img/学校長.png"　id="kochopicture" style="width: 400px; height: 464px;">
-            <h2>氏名</h2> 
-           <h3> ゆっくり法律・司法解説チャンネル</h3>
-        </div>
-    </div>
-        <footer id="footer">
-            <div class="box" id="hutter">
-                <p id="footer1">© 2021 ゆっくり大学　<a href="porise.html">プライバシーポリシー</a></p>
+        <div class="content">
+            <!--プロフィール-->
+            <div class="profile">
+                <h1 class="title_h1_A">学長プロフィール</h1>
+                <img src="./media/img/profile.png">
+                <h2>氏名</h2>
+                <h3> ゆっくり法律・司法解説チャンネル</h3>
             </div>
-</footer>
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="./js/slide.js"></script>
-    
+            <!--学校長の言葉-->
+            <div class="sentence">
+                <h1 class="title_h1_A">学校長の言葉</h1>
+                <p>
+                    今般のコロナ禍により、多くの人々が生存の危機と生活の困難に直面しています。皆さまに心からお見舞い申し上げ、各関係分野でご努力を続けておられる方々に敬意を表し感謝申し上げます。<br>
+                    ゆっくり大学は、ゆっくり解説動画を通じてオンライン授業の拡充することにより、ステイホームやコロナ自粛における皆さまの新しい生活をより有意義なものとできるよう努めてまいります。<br>
+
+                    当学は、「自ら調べ自ら考える力ある人物の育成」及び「ゆっくり解説の門戸を広げる」との建学の精神のもと、動画投稿者を支援するとともに、よりよい動画を視聴者に提供することで、社会を支え、未来を拓く人材を送り出します。<br>
+                    <br>
+                    学問や研究は、実社会とそこに生きる人々と無縁ではなく、現実事象から課題を発見し、解説動画として視聴者にを還元すべきです。また、解説動画は社会の営みや視聴者の反応との相互作用により発展すべきです。よって当学は常に時代とともにあり、社会の変化に適合するよう進化してまいります。<br>
+                    <br>
+                    かかる社会の変化に適合する解説動画を支援することは、「自ら調べ自ら考える力ある人物の育成」という当学の建学の精神に根ざしています。したがって、当学教員の投稿する解説動画は、視聴者の自ら考える力の素地としての知識を伝達することはもとより、コメントやツイッターでの交流の中で培われるコミュニケーション力や議論する力、そして弛まず学び続ける力の涵養にする一助となるものと確信しております。<br>
+                    <br>
+                    今日の日本社会においては、DX（デジタルトランスフォーメーション）の進展に加え、働き方改革の進展やアフターコロナの新生活様式に思いを致すとき、従来にない大きな変化が起こることが予見できます。そこで当学は視聴者がこの歴史的変化に備え、かつよりよい生活を営めるよう学習環境の充実に向けて前進します。<br>
+                    <br>
+                    我々は解説動画自体は勿論のことコメント欄やツイッターといった豊富なリソースを活用し、視聴者と共に学び、成長することを望んでいます。このように「開かれたゆっくり大学」を目指してまいりますので、視聴者さんも遠慮なくリソースを活用してくださいね。
+                </p>
+                <img src="./media/img/sain.jpg">
+            </div>
+        </div>
+        <hr class="float_clearA">
+
+    </main>
+
+    <footer>
+        <div class="footer_content">
+            <p id="footer1">© 2021 ゆっくり大学　<a href="porise.html">プライバシーポリシー</a></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+    <script type="text/javascript" src="./js/slide.js"></script>
+
 </body>
 </html>
