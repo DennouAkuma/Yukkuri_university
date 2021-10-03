@@ -1,0 +1,321 @@
+﻿@charset "utf-8";
+
+h1 {
+    text-align: center
+}
+
+img {
+    vertical-align:bottom;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #eee;
+}
+
+h2, p {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #333;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #a9bce2;
+}
+
+.active {
+    background-color: #da3c41;
+}
+
+/*--ロゴ--*/
+#title_logo{
+    text-align: center; /*webサイトの中央？*/
+    margin: 0;
+    padding: 0;
+    width: 400px;
+}
+
+/*メニュー関連*/
+#menu_ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1b2538;
+}
+
+#menu_ul li{
+    float: left;
+    border-right: 1px solid #bbbbbb;
+}
+
+
+/*float解除(見えない水平線)*/
+.float_clearA{
+    clear: both;
+
+    margin: 0;
+    padding: 0;
+}
+
+/*コンテンツ*/
+.content{
+    margin-top: 85px;
+}
+
+.content h1{
+    color: #364e96; /*文字色*/
+    padding: 0.5em 0; /*上下の余白*/
+    border-top: solid 3px #364e96; /*上線*/
+    border-bottom: solid 3px #364e96; /*下線*/
+}
+
+.content p{
+    text-align: left 
+}
+
+/*スライド部分*/
+#slide_content{
+    position: relative;  
+    overflow: hidden;
+    border: 1px solid rgb(12, 165, 226);
+    padding: 0;
+    margin: 0;
+}
+
+#slide_all{
+    position: absolute;
+    border: 1px solid rgb(141, 17, 224);
+    float: left;
+}
+
+#slide_all img{
+    border: 1px solid #f00;
+    float: left;  
+}
+
+
+body {
+    width: 1980px;
+    margin: 0 auto;
+}
+
+#header {
+    width: 1980px;
+}
+
+#suraido {
+    width: 1980px;
+}
+
+#main {
+    text-align: center;
+    width: 1580px;
+    text-align: center;
+    float:right;
+}
+
+#side {
+    width: 400px;
+    float: left;
+}
+
+#footer {
+    clear: both;
+    width: 1980px;
+    height: 175px;
+}
+
+#wordkocho {
+    color: #364e96; /*文字色*/
+    padding: 0.5em 0; /*上下の余白*/
+    border-top: solid 3px #364e96; /*上線*/
+    border-bottom: solid 3px #364e96; /*下線*/
+}
+
+#kochopurofiru {
+    margin: auto;
+    width: 400px;
+    height: 800px;
+    background: snow;
+
+}
+
+#kochopurofiru1 {
+    padding: 0.4em 0.5em; /*文字の上下 左右の余白*/
+    color: #494949; /*文字色*/
+    background: #f4f4f4; /*背景色*/
+    border-left: solid 5px #7db4e6; /*左線*/
+    border-bottom: solid 3px #d7d7d7; /*下線*/
+}
+
+#kochopicture {
+    width: 400px;
+    height: 464px;
+}
+
+#hutter {
+    margin: auto;
+    width: 1980px;
+    height: 175px;
+    background: #f5fffa;
+}
+
+#footer1{
+    text-align:center;
+}
+
+#polisemidasi {
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+}
+
+h3{
+    text-align:center;
+}
+
+/*ゆっくり大学とは*/
+
+#setumeimidasi1 {
+    color: #364e96; /*文字色*/
+    padding: 0.5em 0; /*上下の余白*/
+    border-top: solid 3px #364e96; /*上線*/
+    border-bottom: solid 3px #364e96; /*下線*/
+}
+
+
+
+
+/*霊夢のセリフ*/
+#reimu{
+    text-align:center;
+    position:relative;
+
+}
+
+.balloon2-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 600px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #FFF;
+    border: solid 3px red;
+    box-sizing: border-box;
+}
+
+    .balloon2-left:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -24px;
+        margin-top: -12px;
+        border: 12px solid transparent;
+        border-right: 12px solid #FFF;
+        z-index: 2;
+    }
+
+    .balloon2-left:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        margin-top: -14px;
+        border: 14px solid transparent;
+        border-right: 14px solid red;
+        z-index: 1;
+    }
+
+    .balloon2-left p {
+        margin: 0;
+        padding: 0;
+    }
+
+#reimuserif {
+    text-align: center;
+    position: relative;
+    left:500px;
+}
+
+/*魔理沙のセリフ*/
+
+.balloon2-right {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 15px 1.5em 0;
+    padding: 7px 10px;
+    min-width: 600px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #FFF;
+    border: solid 3px gold;
+    box-sizing: border-box;
+}
+
+    .balloon2-right:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -24px;
+        margin-top: -12px;
+        border: 12px solid transparent;
+        border-left: 12px solid #FFF;
+        z-index: 2;
+    }
+
+    .balloon2-right:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        margin-top: -14px;
+        border: 14px solid transparent;
+        border-left: 14px solid gold;
+        z-index: 1;
+    }
+
+    .balloon2-right p {
+        margin: 0;
+        padding: 0;
+    }
+
+#marisaserif {
+    text-align: center;
+    position: relative;
+}
