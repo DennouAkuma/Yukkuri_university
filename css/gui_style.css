@@ -14,6 +14,44 @@
     
 }
 
+.button-type_A{
+    margin: 20px;
+}
+
+.sub_title_div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+}
+
+.sub_title_div h2{
+    padding: 15px 0;
+    margin: 0;
+    
+}
+
+.sub_title_div p{
+    padding: 0;
+    margin: 0;
+}
+
+.icon_a h2{
+    background: url(../media/img/icon/icon_info.svg) no-repeat;
+    background-size: 66px;
+}
+
+.icon_b h2{
+    background: url(../media/img/icon/icon_megafon.svg) no-repeat;
+    background-size: 66px;
+}
+
+.icon_c h2{
+    background: url(../media/img/icon/icon_book.svg) no-repeat;
+    background-size: 66px;
+}
+
+
 .sample5-2::before{
     left: 3px;
     width: 4px;

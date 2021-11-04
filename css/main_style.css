@@ -5,6 +5,10 @@
 ページ配色の原色設定
 */
 :root{
+    --mc-b1: ;
+    --mc-b2: ;
+    --mc-a1: ;
+    --mc-a2: ;
     --fc-h1: ;
     --fc-h2: ;
     --fc-h3: ;
@@ -45,14 +49,12 @@ h1 {
     text-align: center
 }
 
-h2, p {
+h2{
     text-align: center;
-    padding: 20px;
 }
 
 h3 {
     text-align: center;
-    padding: 20px;
 }
 
 ul {
@@ -63,43 +65,36 @@ ul {
 
 a {
     color: #333;
+    text-decoration:none;
 }
 
-a:hover,
-a:active {
-    text-decoration: none;
-}
-
-/*その他*/
-
-img {
-    vertical-align:bottom;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #a9bce2;
-}
-
-.active {
-    background-color: #da3c41;
-}
 
 /*===========id/classの記述↓==========*/
+/*--お問い合わせ--*/
+#top_header{
+    width:100%;
+    height: 45px;
+    background-color: #006A27;
+    margin: 0;
+    padding: 0;
+}
+#top_header div{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#top_header a{
+    color: #fff;
+    font-size: 15px;
+    padding: 11px 0;
+    float: right;
+}
+
 /*--ロゴ--*/
 #logo_top{
     width: 1200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -115,33 +110,73 @@ li a:hover:not(.active) {
 #logo_top a{
     float: right;
     margin: 0;
-    padding: 0;
+    padding: 38px 0;
 }
 
 
 
 /*メニュー関連*/
-#menu_div{
-    width: 100%;
-    background-color: #1b2538;
+.gnav-wrapper {
+    position: relative;
 }
 
-#menu_div ul{
+.gnav {
+    background: #5e5e5e;
+    display: flex;
+    justify-content: space-between;
     width: 1200px;
-    list-style-type: none;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+}
+
+.gnav li {
+    padding: 25px 0;
+    width: 150px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.gnav li:hover {
+    background: #3e3e3e;
+}
+
+.gnav a {
+    font-size: 15px;
+    color: #fff;
+}
+
+.gnav > li:hover .megamenu {
+    max-height: 9999px;
+    opacity: 1;
+    padding: 30px 0;
+}
+
+.megamenu {
+    background: #3e3e3e;
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
+    width: 1200px;
+    position: absolute;
+    top: 74px;
+    transition: all .2s ease-in;
+    z-index: 999;
 }
 
-#menu_div ul li{
-    width: 149px;
-    float: left;
-    border-right: 1px solid #bbbbbb;
+.megamenu-inner {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.megamenu-inner li {
+    text-align: center;
+    width: 45%;
+    padding: 0;
+}
 
+.megamenu-inner a {
+    border-left: none;
+}
 
 /*float解除(見えない水平線)*/
 .float_clearA{
@@ -160,7 +195,7 @@ li a:hover:not(.active) {
     text-align: left 
 }
 
-/*スライド部分*/
+/*--スライド部分--*/
 #slide_content{
     position: relative;  
     overflow: hidden;
@@ -174,52 +209,10 @@ li a:hover:not(.active) {
 }
 
 #slide_all img{
-    float: left;  
-}
-
-/*--プロフィール--*/
-.content{
-    width: 95%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.profile{
-    width: 19.5%;
-    float: left;
-    margin-right: 0.5%;
-}
-.profile img{
-    width: 100%;
-    height: auto;
-}
-
-.sentence{
-    width: 80%;
     float: left;
 }
 
-/*
-サインの位置はどうすればよろしいでしょうか？
-一応、公式文章ぽく右側に持ってきていますが…
-*/
-.sentence img{
-    width: 10%;
-    float: right;
-}
 
-/*
-「学校長の言葉」を中央ぞろえに
-持っていく場合は「.sentence p」の
-コメントから外してください
-*/
-
-/*
-.sentence p{
-    text-align: center;
-}
-*/
 
 /*ゆっくり会話*/
 /*後にファイル変更推奨*/
@@ -230,34 +223,119 @@ li a:hover:not(.active) {
     margin-left: auto;
 }
 
-/*--学科情報--*/
-.float_icon{
-    width: 50px;
-    float: left;
-}
-
-.sub_title_div{
-    width: 250px;
+/*--ピックアップ--*/
+#pickup_content{
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-
 }
-
-.sub_title_div img{
-    top: 50px;
-    width: 50px;
+.pu_sub_content{
+    width:260px;
+    margin: 20px;
     float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.sub_title_div h2{
-    margin: 0;
-    padding-top: 10px;
-    float: right;
+.pu_sub_content img{
+    width: 240px;
+    margin: 10px 10px;
 }
+
+/*--ニュース--*/
+#bc_news{
+    padding-top: 30px;
+    background-color: #fbfbfb;
+    margin-bottom: 100px;
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 1050px;
+    margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+    display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+    text-align: left;
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.tab_sub_content{
+    width: 100%;
+    border-bottom: #929292 1px solid;
+    padding: 10px 0;
+}
+.tab_sub_content label{
+    float: left;
+    padding: 0 20px 0 30px;
+}
+.tab_sub_content p{
+    padding: 2px 0px 2px 30px;
+    float: left;
+    margin: 0;
+}
+.tab_sub_content:hover{
+    border-bottom: #91ffa9 1px solid;
+}
+
+.tab_sub_content:hover p{
+    color: #91ffa9;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+    display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+}
+  
+
+
+
+/*--学科情報--*/
+
 
 #bc_change{
     background-color: #e9f4f5;
+    margin-bottom: 100px;
 }
 
 #department_div{
