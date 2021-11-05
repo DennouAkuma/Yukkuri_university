@@ -5,8 +5,8 @@
     </div>
 </div>
 <div id="logo_top">
-    <img id="title_logo" src="./media/img/logo3.svg">
-    <a href="#" class="icon_d">職員専用ページ</a>
+    <a id="logo_img" href="./index.php"><img id="title_logo" src="./media/img/logo3.svg"></a>
+    <a id="logo_a" href="#" class="icon_d">職員専用ページ</a>
     <hr class="float_clearA">
 </div>
 
@@ -14,17 +14,18 @@
 <nav class="gnav-wrapper">
     <ul class="gnav main-wrapper">
         <li>
-            <a href="">大学案内</a>
+            <a href="./school_overview.php">大学案内</a>
             <div class="megamenu menu_div_left1">
                 <ul class="megamenu-inner main-wrapper">
                     <li>
                         <h3>大学概要</h3>
                         <ul>
-                            <li><a href="#" class="cm_link">学長・副学長挨拶</a></li>
-                            <li><a href="#" class="cm_link">設立目的</a></li>
-                            <li><a href="#" class="cm_link">大学の沿革</a></li>
-                            <li><a href="#" class="cm_link">広報</a></li>
-                            <li><a href="#" class="cm_link">情報の扱い</a></li>
+                            <li><a href="./school_overview.php#so_A" class="cm_link">学長の言葉</a></li>
+                            <li><a href="./school_overview.php#so_B" class="cm_link">副学長の言葉</a></li>
+                            <li><a href="./school_overview.php#so_C" class="cm_link">設立目的</a></li>
+                            <li><a href="./school_overview.php#so_D" class="cm_link">大学の沿革</a></li>
+                            <li><a href="./school_overview.php#so_E" class="cm_link">広報</a></li>
+                            <li><a href="./school_overview.php#so_F" class="cm_link">情報の扱い</a></li>
                         </ul>
                     </li>
                     <li>
@@ -109,7 +110,7 @@
             </div>
         </li>
         <li>
-            <a href="">メニュー5</a>
+            <a href="">教授募集</a>
             <div class="megamenu menu_div_left5">
             </div>
         </li>

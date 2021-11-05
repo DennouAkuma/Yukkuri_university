@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="./css/main_style.css">
 <link rel="stylesheet" href="./css/gui_style.css">
 <link rel="stylesheet" href="./css/menu_style.css">
+<link rel="stylesheet" href="./css/side_main_style.css">
+
+<link rel="stylesheet" href="./css/so_main_style.css">
 
 <!--アイコン設定-->
 <link rel="icon" type="image/png" href="./media/img/icon.png" />

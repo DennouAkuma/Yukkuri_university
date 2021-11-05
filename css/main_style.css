@@ -99,7 +99,7 @@ a {
     margin-right: auto;
 }
 
-#logo_top img{
+#logo_img img{
     text-align: center; /*webサイトの中央？*/
     float: left;
     margin: 0;
@@ -107,7 +107,7 @@ a {
     width: 400px;
 }
 
-#logo_top a{
+#logo_a{
     float: right;
     margin: 0;
     padding: 45px 0 45px 30px;
