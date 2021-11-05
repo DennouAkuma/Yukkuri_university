@@ -1,0 +1,4 @@
+BrowserMatch "Googlebot|Bingbot|Y!J-" crawler=true
+RewriteEngine On
+RewriteCond %{ENV:crawler} true
+RewriteRule . - [F]
