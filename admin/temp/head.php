@@ -6,6 +6,7 @@
 <title><?php echo $title_str; ?></title>
 <link rel="stylesheet" href="./css/admin_main_style.css">
 <link rel="stylesheet" href="./css/admin_gui_style.css">
+<link rel="stylesheet" href="./css/jquery-linedtextarea.css">
 
 <!--アイコン設定-->
 <link rel="icon" type="image/png" href="./media/img/icon.png" />

@@ -105,17 +105,17 @@
             </div>
         </li>
         <li>
-            <a href="">研究</a>
+            <a href="">記事・動画一覧</a>
             <div class="megamenu menu_div_left4">
             </div>
         </li>
         <li>
-            <a href="">教授募集</a>
+            <a href=""></a>
             <div class="megamenu menu_div_left5">
             </div>
         </li>
         <li>
-            <a href="">メニュー6</a>
+            <a href="">記事一覧</a>
             <div class="megamenu menu_div_left6">
             </div>
         </li>

@@ -1,14 +1,21 @@
 body {
     font-family: "メイリオ" ;
     width: 100%;
-    background: #fff;
+    background: #202124;
+    color: #fff;
     margin: 0;
 }
 
 #login_div{
-    width: 300px;
+    width: 500px;
+    padding: 30px;
+    margin-top: 50px;
     margin-left:auto;
     margin-right:auto;
+    background-color: #292a2d;
+
+    box-shadow: 0 0 3px #000;
+    border-radius: 5px;
 }
 
 #login_div h1{
@@ -16,7 +23,130 @@ body {
 }
 
 .login_bt_div{
-    width: 210px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.login_bt_div>input:nth-child(1){
+    float: left;
+}
+
+.login_bt_div>input:nth-child(2){
+    float: right;
+}
+
+.left_main_content{
+    margin-top: 100px;
+}
+/*=======================main=======================*/
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #292a2d;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-radius: 5px 5px 0 0;
+    background-color: #292a2d;;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+    display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+    display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    border-bottom: 3px solid #5ab4bd;
+    color: #fff;
+}
+.left_sub_content{
+    width: 5%;
+    float: left;
+    text-align: center;
+}
+
+.add_content_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.right_sub_content{
+    width: 93%;
+    float: right;
+}
+
+.text_program{
+    width: 100%;
+    height: 60vh;
+    background-color: #292a2d;
+    font-size: 80px;
+    color: #a7a7a7;
+}
+.add_content_list>li>img{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5f6368;
+}
+.add_content_list>li:nth-child(1):hover{
+    background-color: #3c4043;
+}
+.add_content_list>li:nth-child(2):hover{
+    background-color: #3c4043;
+}
+.add_content_list>li:nth-child(3):hover{
+    background-color: #3c4043;
+}
+
+.text_program:focus {
+    outline: none;
+}
+
+#code_editer:focus{
+    outline: none;
+}
+
+#code_design{
+    background-color: #ffffff;
+    color: #2b2b2b;
+    padding: 20px;
 }
