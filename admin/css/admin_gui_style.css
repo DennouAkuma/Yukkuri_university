@@ -1,0 +1,39 @@
+.in_text_A{
+    width:100%;
+    padding:10px;
+    margin: 10px;
+
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+}
+
+.in_text_A:focus {
+    border: 2px solid #ff9900; 
+    z-index: 10;
+    outline: 0;
+}
+
+.in_button{
+    width: 100px;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+}
+
+.bt_type_A{
+    background-color: #FF1744;
+}
+.bt_type_A:hover{
+    background-color: #FF8A80;
+}
+
+.bt_type_B{
+    background-color: #2979FF;
+}
+.bt_type_B:hover{
+    background-color: #82B1FF;
+}

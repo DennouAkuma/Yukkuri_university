@@ -6,7 +6,7 @@
 </div>
 <div id="logo_top">
     <a id="logo_img" href="./index.php"><img id="title_logo" src="./media/img/logo3.svg"></a>
-    <a id="logo_a" href="#" class="icon_d">職員専用ページ</a>
+    <a id="logo_a" href="./admin/admin_login.php" class="icon_d">職員専用ページ</a>
     <hr class="float_clearA">
 </div>
 
