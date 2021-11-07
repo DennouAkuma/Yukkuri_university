@@ -1,0 +1,75 @@
+/* モーダルCSS */
+.modalArea {
+	display: none;
+	position: fixed;
+	z-index: 10; /*サイトによってここの数値は調整 */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modalBg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(10,10,10,0.9);
+}
+
+.modalWrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	width: 800px;
+	background-color: #292a2d;
+	border-radius: 5px;
+}
+
+.h2_type_A{
+	padding: 10px 10px 0 40px;
+	margin: 10px 10px;
+	background: url("../media/img/icon_heading.svg") no-repeat;
+	background-size: 36px;
+	background-position-y: 6px;
+}
+
+.h2_type_B{
+	padding: 10px 10px 0 40px;
+	margin: 10px 10px;
+	background: url("../media/img/icon_text.svg") no-repeat;
+	background-size: 36px;
+	background-position-y: 6px;
+}
+
+.h2_type_C{
+	padding: 10px 10px 0 40px;
+	margin: 10px 10px;
+	background: url("../media/img/icon_img.svg") no-repeat;
+	background-size: 36px;
+	background-position-y: 6px;
+}
+
+.h2_type_D{
+	padding: 10px 10px 0 40px;
+	margin: 10px 10px;
+	background: url("../media/img/icon_img.svg") no-repeat;
+	background-size: 36px;
+	background-position-y: 6px;
+}
+
+.closeModal {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+
+/* 以下ボタンスタイル */
+button {
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #282828;
+	border-radius: 2px;
+	cursor: pointer;
+}

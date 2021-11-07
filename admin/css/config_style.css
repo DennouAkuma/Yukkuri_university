@@ -1,0 +1,13 @@
+.modal_grid{
+    padding: 15px;   
+}
+
+.modal_grid_left{
+    width: 170px;
+    float: left;
+}
+
+.modal_grid_right{
+    width: 600px;
+    float: left;
+}

@@ -1,0 +1,60 @@
+
+.select_boder_div{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal_grid{
+    display: grid;
+    grid-template-columns: 150px 470px 150px;
+    grid-template-rows:100px 150px 100px;
+    padding: 15px;
+}
+
+.top_down_div{
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows:25px 25px;
+    padding: 0;
+    margin: 25px 0 0 75px;
+}
+
+.left_right_div{
+    display: grid;
+    grid-template-columns: 75px 75px;
+    grid-template-rows:25px 25px 25px 25px;
+    padding: 0;
+    
+    margin: 25px 0 0 0;
+}
+
+.heading_border{
+    width: 50px;
+}
+
+.base_info{
+    padding: 10px;
+}
+
+.base_info>div{
+    width: 100px;
+    float: left;
+}
+
+#heading_heading{
+    width: 400px;
+    margin-top: 57px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gui_area{
+    padding: 10px;
+}
+
+.gui_area textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+}

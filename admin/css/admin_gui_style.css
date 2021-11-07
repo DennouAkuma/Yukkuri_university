@@ -18,6 +18,26 @@
     outline: 0;
 }
 
+.in_text_B{
+    width:700px;
+    padding:2px 0 2px 0;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+}
+
+.in_text_B:focus {
+    border: 2px solid #ff9900; 
+    z-index: 10;
+    outline: 0;
+}
+
 .in_button{
     width: 100px;
     padding: 10px;
@@ -63,3 +83,7 @@
     padding: 0;
 }
 
+.hr_type_A{
+    width: 100%;
+    border: #5f6368 1px solid;
+}
