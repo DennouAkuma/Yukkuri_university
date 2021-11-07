@@ -44,6 +44,7 @@
     float: left;
 }
 
+/*--right_content--*/
 .left_sub_contentA{
     width: 550px;
     float: left;
@@ -58,18 +59,19 @@
     margin-left: 5px;
 }
 
+/*--left_content--*/
 .left_sub_contentB{
     width: 200px;
     float: left;
 }
-.right_sub_contentB{
-    width: 550px;
-    float: right;
-}
-.right_sub_contentB img{
+.left_sub_contentB img{
     width: 190px;
     margin-right: 5px;
     margin-left: 5px;
+}
+.right_sub_contentB{
+    width: 550px;
+    float: right;
 }
 
 /*--サイドメニュー--*/
