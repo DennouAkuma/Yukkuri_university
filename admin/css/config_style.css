@@ -7,6 +7,19 @@
     float: left;
 }
 
+.modal_grid_left ul{
+    margin: 0 10px 0 10px;
+    list-style: none;
+    font-size: 18px;
+    padding: 0;
+}
+
+.modal_grid_left ul li{
+    padding: 10px;
+    border-bottom: 2px solid #5f6368;
+    text-align: center;
+}
+
 .modal_grid_right{
     width: 600px;
     float: left;

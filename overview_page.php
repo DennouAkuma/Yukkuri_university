@@ -38,7 +38,7 @@ if(!$result_sql){
 ?>
 </head>
 <body>
-<header>
+    <header>
     <?php
         include './temp/header.php';
     ?>
@@ -121,15 +121,17 @@ if(!$result_sql){
                 <hr class="float_clearA">
             </div>
             <?php
+                $side_number = 0;
                 include './temp/side.php';
             ?>
         </div>
         <hr class="float_clearA">
     </main>
     <footer>
-        <?php
-            include './temp/footer.php' ;
-        ?>
+    <?php
+        include './temp/footer.php' ;
+    ?>
     </footer>
+
 </body>
 </html>

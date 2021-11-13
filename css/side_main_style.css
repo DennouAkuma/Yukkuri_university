@@ -19,6 +19,18 @@
     background: url("../media/img/bc_imgA.jpg") no-repeat;
     background-position: center;
 }
+.bc_imgA>div>h1{
+    color: var(--menu-colorA);
+}
+
+.bc_imgB{
+    background: url("../media/img/bc_imgB.jpg") no-repeat;
+    background-position: center;
+}
+.bc_imgB>div>h1{
+    color: var(--menu-colorB);
+}
+
 .margin_div>div{
     width: 400px;
     padding-top: 176px;
@@ -28,7 +40,6 @@
 
 .margin_div>div>h1{
     background-color: var(--menu_fcA);
-    color: var(--menu-colorA);
     border-radius: 5px;
     margin: 0;
 }

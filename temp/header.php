@@ -1,3 +1,61 @@
+<?php 
+    include "./admin/temp/root.php";
+
+    $db_link = new mysqli($mysql_host_A, $mysql_user_A, $mysql_pass_A,$mysql_db_A);
+    if (!$db_link) {
+        die('接続失敗'.mysqli_error());
+    }
+
+    //学科情報
+    $sql_select = 'select * from ud_list';
+    $u_name_list = array();
+    $d_name_list = array();
+    $u_id_list = array();
+    $d_id_list = array();
+    
+    $m_id_list = array();
+    $name_str_list = array();
+
+    $result_sql = mysqli_query($db_link,$sql_select);
+
+    if(!$result_sql){
+        die('失敗'.mysqli_error());
+    }else{
+        while ($row = mysqli_fetch_assoc($result_sql)) {
+            array_push($d_name_list,$row['d_name']);
+            array_push($u_id_list,$row['d_id']);
+        }        
+    }
+
+    //学部情報
+    $sql_select = 'select * from ud_list group by u_id';
+
+    $result_sql = mysqli_query($db_link,$sql_select);
+
+    if(!$result_sql){
+        die('失敗'.mysqli_error());
+    }else{
+        while ($row = mysqli_fetch_assoc($result_sql)) {
+            array_push($u_name_list,$row['u_name']);
+            array_push($d_id_list,$row['u_id']);
+        }        
+    }
+
+    //チャンネル情報
+    $sql_select = 'select * from base_info where 5 != authority_int';
+
+    $result_sql = mysqli_query($db_link,$sql_select);
+
+    if(!$result_sql){
+        die('失敗'.mysqli_error());
+    }else{
+        while ($row = mysqli_fetch_assoc($result_sql)) {
+            array_push($m_id_list,$row['m_id']);
+            array_push($name_str_list,$row['name_str']);
+        }        
+    }
+?>
+
 <div id="top_header">
     <div>
         <a>お問い合わせ</a>
@@ -14,18 +72,18 @@
 <nav class="gnav-wrapper">
     <ul class="gnav main-wrapper">
         <li>
-            <a href="./school_overview.php">大学案内</a>
+            <a href="./overview_page.php">大学案内</a>
             <div class="megamenu menu_div_left1">
                 <ul class="megamenu-inner main-wrapper">
                     <li>
                         <h3>大学概要</h3>
                         <ul>
-                            <li><a href="./school_overview.php#so_A" class="cm_link">学長の言葉</a></li>
-                            <li><a href="./school_overview.php#so_B" class="cm_link">副学長の言葉</a></li>
-                            <li><a href="./school_overview.php#so_C" class="cm_link">設立目的</a></li>
-                            <li><a href="./school_overview.php#so_D" class="cm_link">大学の沿革</a></li>
-                            <li><a href="./school_overview.php#so_E" class="cm_link">広報</a></li>
-                            <li><a href="./school_overview.php#so_F" class="cm_link">情報の扱い</a></li>
+                            <li><a href="./overview_page.php#so_A" class="cm_link">学長の言葉</a></li>
+                            <li><a href="./overview_page.php#so_B" class="cm_link">副学長の言葉</a></li>
+                            <li><a href="./overview_page.php#so_C" class="cm_link">設立目的</a></li>
+                            <li><a href="./overview_page.php#so_D" class="cm_link">大学の沿革</a></li>
+                            <li><a href="./overview_page.php#so_E" class="cm_link">広報</a></li>
+                            <li><a href="./overview_page.php#so_F" class="cm_link">情報の扱い</a></li>
                         </ul>
                     </li>
                     <li>
@@ -40,60 +98,60 @@
             </div><!-- .megamenu -->
             </li>
         <li>
-            <a href="">学科</a>
+            <a href="./undergraduate_page.php">学部学科</a>
             <div class="megamenu menu_div_left2">
                 <ul class="megamenu-inner main-wrapper">
                     <li>
-                        <h3>政治経営学部</h3>
+                        <h3><?php echo $u_name_list[0];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">法律学科</a></li>
-                            <li><a href="#" class="cm_link">経営学科</a></li>
-                            <li><a href="#" class="cm_link">政治学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[0];?> class="cm_link"><?php echo $d_name_list[0];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[1];?> class="cm_link"><?php echo $d_name_list[1];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[2];?> class="cm_link"><?php echo $d_name_list[2];?></a></li>
                         </ul>
-                        <h3>文学部</h3>
+                        <h3><?php echo $u_name_list[1];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">文学科</a></li>
-                            <li><a href="#" class="cm_link">史学科</a></li>
-                            <li><a href="#" class="cm_link">心理学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[3];?> class="cm_link"><?php echo $d_name_list[3];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[4];?> class="cm_link"><?php echo $d_name_list[4];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[5];?> class="cm_link"><?php echo $d_name_list[5];?></a></li>
                         </ul>
-                        <h3>工学部</h3>
+                        <h3><?php echo $u_name_list[2];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">地球・宇宙科学</a></li>
-                            <li><a href="#" class="cm_link">情報学科</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>理学部</h3>
-                        <ul>
-                            <li><a href="#" class="cm_link">生物学科</a></li>
-                            <li><a href="#" class="cm_link">化学科</a></li>
-                        </ul>
-                        <h3>芸術学部</h3>
-                        <ul>
-                            <li><a href="#" class="cm_link">音楽学科</a></li>
-                            <li><a href="#" class="cm_link">ゲーム学科</a></li>
-                        </ul>
-                        <h3>外国語学部</h3>
-                        <ul>
-                            <li><a href="#" class="cm_link">英語学科</a></li>
-                        </ul>
-                        <h3>家政学部</h3>
-                        <ul>
-                            <li><a href="#" class="cm_link">食物学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[6];?> class="cm_link"><?php echo $d_name_list[6];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[7];?> class="cm_link"><?php echo $d_name_list[7];?></a></li>
                         </ul>
                     </li>
                     <li>
-                        <h3>国際文化学部</h3>
+                        <h3><?php echo $u_name_list[3];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">国際学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[8];?> class="cm_link"><?php echo $d_name_list[8];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[9];?> class="cm_link"><?php echo $d_name_list[9];?></a></li>
                         </ul>
-                        <h3>医学部</h3>
+                        <h3><?php echo $u_name_list[4];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">医学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[10];?> class="cm_link"><?php echo $d_name_list[10];?></a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[11];?> class="cm_link"><?php echo $d_name_list[11];?></a></li>
                         </ul>
-                        <h3>獣医学部</h3>
+                        <h3><?php echo $u_name_list[5];?></h3>
                         <ul>
-                            <li><a href="#" class="cm_link">獣医学科</a></li>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[12];?> class="cm_link"><?php echo $d_name_list[12];?></a></li>
+                        </ul>
+                        <h3><?php echo $u_name_list[6];?></h3>
+                        <ul>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[13];?> class="cm_link"><?php echo $d_name_list[13];?></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><?php echo $u_name_list[7];?></h3>
+                        <ul>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[14];?> class="cm_link"><?php echo $d_name_list[14];?></a></li>
+                        </ul>
+                        <h3><?php echo $u_name_list[8];?></h3>
+                        <ul>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[15];?> class="cm_link"><?php echo $d_name_list[15];?></a></li>
+                        </ul>
+                        <h3><?php echo $u_name_list[9];?></h3>
+                        <ul>
+                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[16];?> class="cm_link"><?php echo $d_name_list[16];?></a></li>
                         </ul>
                     </li>
                 </ul><!-- .megamenu-inner -->
@@ -101,7 +159,21 @@
         </li>
         <li>
             <a href="">教授一覧</a>
-            <div class="megamenu menu_div_left3">
+            <div class="megamenu menu_div_left3 p_grid">
+                <?php
+                
+                    for($i = 0;$i < count($m_id_list);$i++){
+                        $chas_add_str = '<div class="channel_list">'."\n";
+                        echo $chas_add_str;
+                        $chas_add_str = '<img src="./media/img/user_img/'.$m_id_list[$i].'/user_icon.png">'."\n";
+                        echo $chas_add_str;
+                        $chas_add_str = '<p>'.$name_str_list[$i].'</p>'."\n";
+                        echo $chas_add_str;
+                        $chas_add_str = '</div>'."\n";
+                        echo $chas_add_str;
+                    }
+                    
+                ?>
             </div>
         </li>
         <li>

@@ -183,6 +183,7 @@ input[name="tab_item"] {
     width: 50px;
     float: right;
     padding: 10px;
+    border-radius: 60px;
 }
 
 .user_img:hover{

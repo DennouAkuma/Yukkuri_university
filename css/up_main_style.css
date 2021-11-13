@@ -1,0 +1,143 @@
+.main_content_up{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sc_up_left_A{
+    width:600px;
+    float:left;
+}
+.sc_up_left_A>a>img{
+    width: 600px;
+}
+
+.sc_up_right_A{
+    width:600px;
+    float: left;
+    padding-top: 30px;
+}
+
+.sc_up_right_B{
+    width:600px;
+    float:left;
+}
+.sc_up_right_B>a>img{
+    width: 600px;
+}
+
+.sc_up_left_B{
+    width:600px;
+    float: left;
+    padding-top: 30px;
+}
+
+.u_top_img{
+    width: 750px;
+    margin:25px;
+}
+
+/*タブ切り替え全体のスタイル*/
+.ud_tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 750px;
+    margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.ud_tab_item {
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.ud_tab_item:hover {
+    opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="ud_tab_item"] {
+    display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.ud_tab_content {
+    text-align: left;
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.ud_tab_sub_content{
+    width: 100%;
+    border-bottom: #929292 1px solid;
+    padding: 10px 0;
+}
+.ud_tab_sub_content label{
+    float: left;
+    padding: 0 20px 0 30px;
+}
+.ud_tab_sub_content p{
+    padding: 2px 0px 2px 30px;
+    float: left;
+    margin: 0;
+}
+.ud_tab_sub_content:hover{
+    border-bottom: #91ffa9 1px solid;
+}
+
+.ud_tab_sub_content:hover p{
+    color: #91ffa9;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+    display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.ud_tabs input:checked + .ud_tab_item {
+    background-color: var(--link-colorA);
+    color: #fff;
+}
+
+/*------*/
+.up_rco_div{
+    background-color: #adadad;
+    padding: 50px;
+}
+.up_rco_div>ul{
+    list-style: disc;
+}
+
+.d_des_img{
+    width: 500px;
+    margin: 0 125px 0 125px;
+}
+
+.video_div>iframe{
+    width: 750px;
+    height: 421.875px;
+}
+
+.du_channel_list{
+    width: 150px;
+}
+.du_channel_list>img{
+    width: 130px;
+}

@@ -173,16 +173,22 @@
             <?php
                 switch($user_type){
                     case 0:
-                        echo "　-一般権限-";
+                        echo "　一般権限";
                         break;
                     case 1:
-                        echo "　-学長権限-";
+                        echo "　学長権限";
                         break;
                     case 2:
-                        echo "　-副学長権限-";
+                        echo "　副学長権限";
                         break;
                     case 3:
-                        echo "　-サイト管理者権限-";
+                        echo "　副学長権限";
+                        break;
+                    case 4:
+                        echo "　サイト管理者権限";
+                        break;
+                    case 5:
+                        echo "　凍結状態";
                         break;
                 }
             ?>
@@ -192,17 +198,22 @@
                 <div class="modal_grid_left">
                     <ul>
                         <li>基本情報</li>
+                        <li>画像設定</li>
                         <?php
                             switch($user_type){
                                 case 0:
                                     break;
                                 case 1:
                                     echo "<li>学長の言葉</li>";
+                                    echo "<li>設立目的</li>";
                                     break;
                                 case 2:
                                     echo "<li>副学長の言葉</li>";
                                     break;
                                 case 3:
+                                    echo "<li>副学長の言葉</li>";
+                                    break;
+                                case 4:
                                     echo "<li>ユーザー追加</li>";
                                     echo "<li>ユーザー削除</li>";
                                     echo "<li>ユーザー変更</li>";
@@ -215,7 +226,36 @@
                     <div>
                         <div><label>チャンネル名</label></div>
                         <div><input type="text"></div>
+                        
+                        <div><label>ログインID</label></div>
+                        <div><input type="text"></div>
+
+                        <div><label>パスワード変更</label></div>
+                        <div><Button type="Button">変更</Button></div>
+
+                        <div></div>
+                        <div>
+                            <div><label>古いパスワード</label></div>
+                            <div><input type="text"></div>
+
+                            <div><label>新しいパスワード</label></div>
+                            <div><input type="text"></div>
+
+                            <div><label>パスワード確認</label></div>
+                            <div><input type="text"></div>
+
+                            <div><Button type="Button">キャンセル</Button></div>
+                            <div><Button type="Button">OK</Button></div>
+                        </div>
+
+                        <div><label>説明文</label></div>
+                        <div><textarea></textarea></div>
+
+                        <div><Button type="Button">キャンセル</Button></div>
+                        <div><Button type="Button">OK</Button></div>
                     </div>
+
+
                 </div>
                 <hr class="float_clearA">
             </div>
@@ -230,7 +270,7 @@
         <div class="top_header">
             <h1>管理者ページ</h1>
             <?php
-                $img_url = '<img id="open_modal_D" class="user_img" src="../media/img/user_img/'.$user_m_id.'.png">';
+                $img_url = '<img id="open_modal_D" class="user_img" src="../media/img/user_img/'.$user_m_id.'/user_icon.png">';
                 echo $img_url;
             ?>
             <hr class="float_clearA">

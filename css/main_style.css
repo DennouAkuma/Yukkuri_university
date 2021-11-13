@@ -1,5 +1,40 @@
 ﻿@charset "utf-8";
+:root{
+    --yukkuri-all-width: 60%;
+    --yukkuri-img-width: 15%;
+    --menu_fcA: #ffffff;
+    --menu_fcB: #3a3a3a;
+    --menu-colorA: #ad1457;
+    --menu-colorB: #4527a0;
+    --menu-colorC: #1565c0;
+    --menu-colorD: #00838f;
+    --menu-colorE: #2e7d32;
+    --menu-colorF: #9e9d24;
+    --menu-colorG: #ff8f00;
+    --menu-colorH: #d84315;
 
+    --link-colorA: #FF1744;
+    --link-colorB: #F50057;
+    --link-colorC: #D500F9;
+    --link-colorD: #651FFF;
+    --link-colorE: #3D5AFE;
+    --link-colorF: #2979FF;
+    --link-colorG: #00B0FF;
+    --link-colorH: #00E5FF;
+    --link-colorI: #1DE9B6;
+    --link-colorJ: #00E676;
+
+    --link-colorK: #FF5252;
+    --link-colorL: #FF4081;
+    --link-colorM: #E040FB;
+    --link-colorN: #7C4DFF;
+    --link-colorO: #536DFE;
+    --link-colorP: #448AFF;
+    --link-colorQ: #40C4FF;
+    --link-colorR: #18FFFF;
+    --link-colorS: #64FFDA;
+    --link-colorT: #69F0AE;
+}
 /*===========root==========*/
 /*
 ページ配色の原色設定

@@ -1,18 +1,4 @@
 /*メニュー関連*/
-
-:root{
-    --menu_fcA: #ffffff;
-    --menu_fcB: #3a3a3a;
-    --menu-colorA: #ad1457;
-    --menu-colorB: #4527a0;
-    --menu-colorC: #1565c0;
-    --menu-colorD: #00838f;
-    --menu-colorE: #2e7d32;
-    --menu-colorF: #9e9d24;
-    --menu-colorG: #ff8f00;
-    --menu-colorH: #d84315;
-}
-
 .gnav-wrapper {
     position: relative;
 }
@@ -206,4 +192,28 @@
 .menu_div_left8{
     background: var(--menu-colorH);
     left: calc(-150px * 7);
+}
+
+/*---channel一覧---*/
+.p_grid{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+}
+
+.channel_list{
+    padding: 5px;
+}
+
+.channel_list img{
+    width: 90px;
+    border-radius: 90px;
+}
+.channel_list p{
+    color: #fff;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.channel_list:hover{
+    background-color: #5999e2;
 }
