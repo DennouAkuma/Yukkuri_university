@@ -297,10 +297,45 @@
                 </div>
                 
                 <h3 class="sub_title_h3_A">教授の動画</h3>
-                <div class="video_div">
+                <div class="folding_main">
+                    <input id="folding_t1" class="folding_trigger" type="checkbox">
+                    <label class="folding_btn" for="folding_t1">続きを読む</label>
+                    <div class="video_div folding_item">
+                    <?php
+                        $sql_select = 'select * from video_list where ';
+                        $video_str_array = array();
+
+                        for($i = 0;$i < count($m_id_list);$i++){
+                            if($i == count($m_id_list) -1){
+                                //last
+                                $sql_select = $sql_select.'m_id = "'.$m_id_list[$i].'"';
+                            }else{
+                                //and
+                                $sql_select = $sql_select.'m_id = "'.$m_id_list[$i].'" or ';
+                            }
+                        }
+
+                        $sql_select = $sql_select.' order by up_load_date';
+
+                        $result_sql = mysqli_query($db_link,$sql_select);
+
+                        if(!$result_sql){
+                            die('失敗'.mysqli_error());
+                        }else{
+                            while ($row = mysqli_fetch_assoc($result_sql)) {
+                                array_push($video_str_array,$row['video_content']);
+                            }        
+                        }
+
+                        for($i = 0;$i < count($video_str_array);$i++){
+                            echo $video_str_array[$i];
+                        }
+                    ?>
+                    </div>
                 </div>
-                <h2 class="sub_title_h2_B"><?php echo $d_name_list[1];?></h2>
-                <h2 class="sub_title_h2_B"><?php echo $d_name_list[2];?></h2>
+                <hr class="float_clearA">
+                <h2 class="sub_title_h2_B"><?php //echo $d_name_list[1];?></h2>
+                <h2 class="sub_title_h2_B"><?php //echo $d_name_list[2];?></h2>
             </div>
             <?php
                 include './temp/side.php';

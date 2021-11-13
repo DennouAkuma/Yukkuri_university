@@ -41,7 +41,10 @@
 
 /*---h3*/
 .sub_title_h3_A{
-
+    padding: 1rem 2rem;
+    border-left: 5px solid #000;
+    background: #f4f4f4;
+    text-align: left;
 }
 
 /*---link---*/

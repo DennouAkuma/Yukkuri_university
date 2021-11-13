@@ -112,14 +112,61 @@ input[name="ud_tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .ud_tabs input:checked + .ud_tab_item {
-    background-color: var(--link-colorA);
+    background-color: #5ab4bd;
     color: #fff;
+}
+
+/*---折り畳み*/
+.folding_main{
+    position:relative;
+}
+.folding_btn{
+    position:absolute;
+    left: 358px;
+    top: 270px;
+    z-index: 1;
+}
+.folding_btn::before{
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+}
+.folding_item{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+.folding_item::before{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+    background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+    content: "";
+}
+.folding_trigger{
+    display: none;
+}
+.folding_trigger:checked + .folding_btn::before{
+    content: "閉じる"
+}
+.folding_trigger:checked ~ .folding_item{
+    height: auto;
+}
+.folding_trigger:checked ~ .folding_item::before{
+    display: none;
 }
 
 /*------*/
 .up_rco_div{
-    background-color: #adadad;
+    width: 600px;
     padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e0e0e0;
 }
 .up_rco_div>ul{
     list-style: disc;
@@ -131,13 +178,23 @@ input[name="ud_tab_item"] {
 }
 
 .video_div>iframe{
-    width: 750px;
-    height: 421.875px;
+    width: 375px;
+    height: 236.25px;
+    margin: 10px;
+    float: left;
 }
 
 .du_channel_list{
     width: 150px;
+    float: left;
 }
 .du_channel_list>img{
     width: 130px;
+    border-radius: 130px;
+    margin: 10px;
+}
+.du_channel_list>p{
+    width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
