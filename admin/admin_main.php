@@ -214,9 +214,7 @@
                                     echo "<li>副学長の言葉</li>";
                                     break;
                                 case 4:
-                                    echo "<li>ユーザー追加</li>";
-                                    echo "<li>ユーザー削除</li>";
-                                    echo "<li>ユーザー変更</li>";
+                                    echo "<li>ユーザー一覧</li>";
                                     break;
                             }
                         ?>
@@ -292,6 +290,10 @@
                 </div>
                 <div class="right_sub_content tab_content_description">
                     <textarea id="code_editer" class="lined text_program" spellcheck="false"></textarea>
+                    <div>
+                        <Button id="article_reset_bt" class="in_button bt_type_A" type="Button">リセット</Button>
+                        <Button id="article_up_bt" class="in_button bt_type_B" type="Button">投稿</Button>
+                    <div>
                 </div>
                 <hr class="float_clearA">
             </div>

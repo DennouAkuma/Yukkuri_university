@@ -50,4 +50,3 @@ function setting_slide(slide_tag,slide_all,sli_time,slp_time){
         chas_count = chas_count + 1;
     },sleep_time);
 }
-

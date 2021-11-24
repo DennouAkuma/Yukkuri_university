@@ -101,59 +101,71 @@
             <a href="./undergraduate_page.php">学部学科</a>
             <div class="megamenu menu_div_left2">
                 <ul class="megamenu-inner main-wrapper">
-                    <li>
-                        <h3><?php echo $u_name_list[0];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[0];?> class="cm_link"><?php echo $d_name_list[0];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[1];?> class="cm_link"><?php echo $d_name_list[1];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[2];?> class="cm_link"><?php echo $d_name_list[2];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[1];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[3];?> class="cm_link"><?php echo $d_name_list[3];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[4];?> class="cm_link"><?php echo $d_name_list[4];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[5];?> class="cm_link"><?php echo $d_name_list[5];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[2];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[6];?> class="cm_link"><?php echo $d_name_list[6];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[7];?> class="cm_link"><?php echo $d_name_list[7];?></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3><?php echo $u_name_list[3];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[8];?> class="cm_link"><?php echo $d_name_list[8];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[9];?> class="cm_link"><?php echo $d_name_list[9];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[4];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[10];?> class="cm_link"><?php echo $d_name_list[10];?></a></li>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[11];?> class="cm_link"><?php echo $d_name_list[11];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[5];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[12];?> class="cm_link"><?php echo $d_name_list[12];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[6];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[13];?> class="cm_link"><?php echo $d_name_list[13];?></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3><?php echo $u_name_list[7];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[14];?> class="cm_link"><?php echo $d_name_list[14];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[8];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[15];?> class="cm_link"><?php echo $d_name_list[15];?></a></li>
-                        </ul>
-                        <h3><?php echo $u_name_list[9];?></h3>
-                        <ul>
-                            <li><a href=<?php echo 'department_page.php?d_status='.$u_id_list[16];?> class="cm_link"><?php echo $d_name_list[16];?></a></li>
-                        </ul>
-                    </li>
+
+                    <?php
+                        //学部情報
+                        $sql_select = 'select * from ud_list order by view_number';
+                        $u_name_list = array();
+                        $d_name_list = array();
+                        $u_id_list = array();
+                        $d_id_list = array();
+
+                        $bt_number = [2,7];
+
+                        $result_sql = mysqli_query($db_link,$sql_select);
+
+                        if(!$result_sql){
+                            die('失敗'.mysqli_error());
+                        }else{
+                            while ($row = mysqli_fetch_assoc($result_sql)) {
+                                array_push($u_name_list,$row['u_name']);
+                                array_push($d_name_list,$row['d_name']);
+                                array_push($u_id_list,$row['u_id']);
+                                array_push($d_id_list,$row['d_id']);
+                            }        
+                        }
+
+                        $fast_flag = false;
+                        $front_str = '';
+                        $shift_count = 0;
+                        $h3_count = 0;
+
+                        for($i = 0;$i < count($d_id_list);$i++){
+                            if($fast_flag == false){
+                                $front_str = $u_id_list[$i];
+                                $fast_flag = true;
+                                
+                                echo '<li>';
+                                echo '<h3>'.$u_name_list[$i].'</h3>';
+                                echo '<ul>';
+                                $front_str = $u_id_list[$i];
+                                echo '<li><a href="department_page.php?d_status='.$d_id_list[$i].'" class="cm_link">'.$d_name_list[$i].'</a></li>';
+                            }else{
+                                //同じ文字
+                                if(strcmp($front_str,$u_id_list[$i]) != 0){
+                                    echo '</ul>';
+
+                                    if($bt_number[$shift_count] == $h3_count){
+                                        echo '</li>';
+                                        echo '<li>';
+                                        if(count($bt_number) != ($shift_count+1)){
+                                            $shift_count++;
+                                        }
+                                    }
+                                    echo '<h3>'.$u_name_list[$i].'</h3>';
+                                    echo '<ul>';
+
+                                    $h3_count++;
+                                }
+                                $front_str = $u_id_list[$i];
+                                echo '<li><a href="department_page.php?d_status='.$d_id_list[$i].'" class="cm_link">'.$d_name_list[$i].'</a></li>';
+                            }
+                        }
+
+                        echo '</ul>';
+                        echo '</li>';
+                    ?>
+
                 </ul><!-- .megamenu-inner -->
             </div>
         </li>

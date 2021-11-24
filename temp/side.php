@@ -42,58 +42,43 @@
             <li><a href="./overview_page.php#so_F">情報の扱い</a></li>';
             echo $chas_str;
             break;
-        case 1:
-            echo '<li><a href="">'.$u_name_list[0].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[0].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[1].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[2].'</a></li>';
-            break;
-        case 2:
-            echo '<li><a href="">'.$u_name_list[1].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[3].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[4].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[5].'</a></li>';
-            break;
-        case 3:
-            echo '<li><a href="">'.$u_name_list[2].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[6].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[7].'</a></li>';
-            break;
-        case 4:
-            echo '<li><a href="">'.$u_name_list[3].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[8].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[9].'</a></li>';
-            break;
-        case 5:
-            echo '<li><a href="">'.$u_name_list[4].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[10].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[11].'</a></li>';
-            break;
-        case 6:
-            echo '<li><a href="">'.$u_name_list[5].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[12].'</a></li>';
-            break;
-        case 7:
-            echo '<li><a href="">'.$u_name_list[6].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[13].'</a></li>';
-            break;
-        case 8:
-            echo '<li><a href="">'.$u_name_list[7].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[14].'</a></li>';
-            break;
-        case 9:
-            echo '<li><a href="">'.$u_name_list[8].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[15].'</a></li>';
-            break;
-        case 10:
-            echo '<li><a href="">'.$u_name_list[9].'</a></li>';
-            echo '<li><a href="">'.$d_name_list[16].'</a></li>';
+        case $side_number < 99:
+
+            $u_number = str_pad($side_number, 3, 0, STR_PAD_LEFT);
+            //学部情報
+            $sql_select = 'select * from ud_list where u_id = "U'.$u_number.'"';
+            $u_name_list = array();
+            $d_name_list = array();
+            $u_id_list = array();
+            $d_id_list = array();
+
+            $result_sql = mysqli_query($db_link,$sql_select);
+
+            if(!$result_sql){
+                die('失敗'.mysqli_error());
+            }else{
+                while ($row = mysqli_fetch_assoc($result_sql)) {
+                    array_push($u_name_list,$row['u_name']);
+                    array_push($d_name_list,$row['d_name']);
+                    array_push($u_id_list,$row['u_id']);
+                    array_push($d_id_list,$row['d_id']);
+                }        
+            }
+
+            for($i = 0;$i < count($u_name_list);$i++){
+                if($i == 0){
+                    echo '<li><a href="#">'.$u_name_list[$i].'</a></li>';
+                }
+                echo '<li><a href="#">'.$d_name_list[$i].'</a></li>';
+            }
+
             break;
 
         case 404:
             break;
     }
-    ?>
 
+
+    ?>
     </ul>
 </div>
