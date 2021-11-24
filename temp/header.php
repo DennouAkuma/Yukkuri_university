@@ -5,6 +5,7 @@
     if (!$db_link) {
         die('接続失敗'.mysqli_error());
     }
+    $db_link->set_charset('utf8');
 
     //学科情報
     $sql_select = 'select * from ud_list';
