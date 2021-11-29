@@ -25,11 +25,8 @@
     }
 
     include "./temp/root.php";
+    include "./temp/db_send.php";
 
-    $db_link = new mysqli($mysql_host_A, $mysql_user_A, $mysql_pass_A,$mysql_db_A);
-    if (!$db_link) {
-        die('接続失敗'.mysqli_error());
-    }
 
     $sql_select = 'select count(*) as number from id_list where "'.$user_id.'" = login_id and "'.$user_pw.'" = login_pass';
 

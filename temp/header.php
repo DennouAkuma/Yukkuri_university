@@ -1,11 +1,4 @@
 <?php 
-    include "./admin/temp/root.php";
-
-    $db_link = new mysqli($mysql_host_A, $mysql_user_A, $mysql_pass_A,$mysql_db_A);
-    if (!$db_link) {
-        die('接続失敗'.mysqli_error());
-    }
-
     //学科情報
     $sql_select = 'select * from ud_list';
     $u_name_list = array();
@@ -194,22 +187,22 @@
             </div>
         </li>
         <li>
-            <a href=""></a>
+            <a href="">大学教務室</a>
             <div class="megamenu menu_div_left5">
             </div>
         </li>
         <li>
-            <a href="">記事一覧</a>
+            <a href="">画廊</a>
             <div class="megamenu menu_div_left6">
             </div>
         </li>
         <li>
-            <a href="">メニュー7</a>
+            <a href="">記事一覧</a>
             <div class="megamenu menu_div_left7">
             </div>
         </li>
         <li>
-            <a href="">メニュー8</a>
+            <a href="">イベント</a>
             <div class="megamenu menu_div_left8">
             </div>
         </li>

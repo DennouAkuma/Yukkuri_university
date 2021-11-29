@@ -1,11 +1,11 @@
+<!doctype html>
+<html>
+<head>
 <?php
-include "./admin/temp/root.php";
-
-$db_link = new mysqli($mysql_host_A, $mysql_user_A, $mysql_pass_A,$mysql_db_A);
-if (!$db_link) {
-    die('接続失敗'.mysqli_error());
-}
-
+    $title_str = "ゆっくり大学・概要";
+    include './temp/head.php';
+?>
+<?php
 $sql_select = 'select * from base_info where 1 = authority_int or 2 = authority_int or 3 = authority_int order by authority_int';
 
 $user_id_array = array();
@@ -23,18 +23,8 @@ if(!$result_sql){
         array_push($user_name_array,$row['name_str']);
         array_push($user_text_array,$row['greeting_text']);
         array_push($esta_text_array,$row['establishment_text']);
-    }        
+    }
 }
-
-
-?>
-
-<!doctype html>
-<html>
-<head>
-<?php
-    $title_str = "ゆっくり大学・概要";
-    include './temp/head.php';
 ?>
 </head>
 <body>

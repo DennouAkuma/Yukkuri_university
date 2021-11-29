@@ -21,3 +21,7 @@
 <link rel="icon" type="image/png" href="./media/img/icon.png" />
 <link rel="shortcut icon" type="image/x-icon" href="./media/img/icon.png" />
 <link rel="apple-touch-icon-precomposed" href="./media/img/icon.png" />
+<?php
+    include "./admin/temp/root.php";
+    include "./admin/temp/db_send.php";
+?>
